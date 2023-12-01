@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+    <div class="container">
+        <header>Миний CV</header>
+
+        <form action="inde" method="post" id="FormCv">
+            <!-- Personal & Education -->
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">ЕРӨНХИЙ МЭДЭЭЛЭЛ</span>
+                    <!-- Personal -->
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Ургийн овог <i class="uil uil-asterisk"></i></label>
+                            <input type="text" name="fname" value="" class="fname">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Эцэг/эхийн нэр <i class="uil uil-asterisk"></i></label>
+                            <input type="text" name="fname" value="" class="fname">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Нэр <i class="uil uil-asterisk"></i></label>
+                            <input type="text" name="fname" value="" class="fname">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Төрсөн огноо</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Гэрлэлтийн байдал</label>
+                            <input type="text" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Жолооны үнэмлэх</label>
+                            <input type="text" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Хүйс</label>
+                            <select required>
+                                <option disabled selected>Хүйс</option>
+                                <option>Эрэгтэй</option>
+                                <option>Эмэгтэй</option>
+                                <option>Бусад</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Имэйл хаяг</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="details ID">
+                    <span class="title">БОЛОВСРОЛ</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Боловсролын түвшин</label>
+                            <input type="text">
+                            <select id="data-degree_id" required="true" onchange="formChange(this)">
+                                <option disabled selected>- Сонго -</option>
+                                <option value="3">Доктор</option>
+                                <option value="2">Магистр</option>
+                                <option value="1">Бакалавр</option>
+                                <option value="8">Мэргэшсэн</option>
+                                <option value="4">Тусгай дунд</option>
+                                <option value="5">Бүрэн дунд</option>
+                                <option value="6">Бүрэн бус дунд</option>
+                                <option value="7">Бага</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Мэргэжил</label>
+                            <input type="number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Элссэн он</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Төгссөн он</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <!-- Experience & Skill -->
+            <div class="form second">
+                <!-- Experience -->
+                <div class="details address">
+                    <span class="title">Address Details</span>
+                        
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill -->
+                <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
