@@ -86,11 +86,7 @@ form .fields .input-field{
     flex-direction: column;
     margin: 4px 0;
 }
-.input-field label{
-    font-size: 12px;
-    font-weight: 500;
-    color: #2e2e2e;
-}
+
 .input-field input, select{
     outline: none;
     font-size: 14px;
@@ -113,7 +109,9 @@ form .fields .input-field{
 .input-field input[type="date"]:valid{
     color: #333;
 }
-.container form button, .backBtn{
+.container form button,
+.backBtn,
+.nextBtn{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +126,10 @@ form .fields .input-field{
     background-color: #4070f4;
     transition: all 0.3s linear;
     cursor: pointer;
+}
+
+.nextBtn i{
+    margin: 0 6px;
 }
 .container form .btnText{
     font-size: 14px;
@@ -172,7 +174,64 @@ form .buttons button , .backBtn{
 .uil-asterisk{
     color: red;
 }
-
-.input-field .is_border_red{
-    border: 1px solid red;
+/*
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+    position: relative;
 }
+
+span.error {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; 
+}
+span.error::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+}
+*/
+
+/* Add this CSS to position the error message to the left */
+.left-position {
+    right: auto;
+    left: -20px;
+}
+
+/* Add other existing styles */
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+    position: relative;
+}
+
+/* Add this CSS to position the error message to the left */
+.left-position {
+    right: auto;
+    left: -20px;
+}
+
+/* Add other existing styles */
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+    position: relative;
+}
+
+
+
+

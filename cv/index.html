@@ -7,9 +7,14 @@
     
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="css/style.css">
-     й
+     
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
 
     <title>Responsive Regisration Form </title> 
 </head>
@@ -17,7 +22,7 @@
     <div class="container">
         <header>Миний CV</header>
 
-        <form action="inde" method="post" id="FormCv">
+        <form action="#" method="post" id="FormCv">
             <!-- Personal & Education -->
             <div class="form first">
                 <div class="details personal">
@@ -26,53 +31,65 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Ургийн овог <i class="uil uil-asterisk"></i></label>
-                            <input type="text" name="fname" value="" class="fname">
+                            <input type="text" name="fname" value="">
                         </div>
 
                         <div class="input-field">
                             <label>Эцэг/эхийн нэр <i class="uil uil-asterisk"></i></label>
-                            <input type="text" name="fname" value="" class="fname">
+                            <input type="text" name="fname" value="">
                         </div>
 
                         <div class="input-field">
                             <label>Нэр <i class="uil uil-asterisk"></i></label>
-                            <input type="text" name="fname" value="" class="fname">
+                            <input type="text" name="fname" value="">
                         </div>
 
                         <div class="input-field">
-                            <label>Төрсөн огноо</label>
+                            <label>Төрсөн огноо <i class="uil uil-asterisk"></i></label>
                             <input type="date">
                         </div>
 
                         <div class="input-field">
+                            <label>Имэйл хаяг <i class="uil uil-asterisk"></i></label>
+                            <input type="text" id="email">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Утасны дугаар <i class="uil uil-asterisk"></i></label>
+                            <input type="text" id="phoneNumber" value="">
+                        </div>
+
+                        <div class="input-field">
                             <label>Гэрлэлтийн байдал</label>
-                            <input type="text" >
+                            <select>
+                                <option value="0">Гэрлээгүй</option>
+                                <option value="1">Гэрлэсэн</option>
+                            </select>
                         </div>
 
                         <div class="input-field">
                             <label>Жолооны үнэмлэх</label>
-                            <input type="text" >
+                            <select>
+                                <option value="0">Байхгүй</option>
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">C</option>
+                                <option value="4">D</option>
+                                <option value="5">E</option>
+                                <option value="6">M</option>
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label>Mobile Number</label>
-                            <input type="number">
-                        </div>
-
-                        <div class="input-field">
-                            <label>Хүйс</label>
-                            <select required>
-                                <option disabled selected>Хүйс</option>
+                            <label>Хүйс <i class="uil uil-asterisk"></i></label>
+                            <select>
+                                <option disabled selected>-- Хүйс --</option>
                                 <option>Эрэгтэй</option>
                                 <option>Эмэгтэй</option>
                                 <option>Бусад</option>
                             </select>
                         </div>
-
-                        <div class="input-field">
-                            <label>Имэйл хаяг</label>
-                            <input type="text">
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -83,8 +100,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Боловсролын түвшин</label>
-                            <input type="text">
-                            <select id="data-degree_id" required="true" onchange="formChange(this)">
+                            <select>
                                 <option disabled selected>- Сонго -</option>
                                 <option value="3">Доктор</option>
                                 <option value="2">Магистр</option>
@@ -113,10 +129,10 @@
                         </div>
                     </div>
 
-                    <button class="nextBtn">
+                    <div class="nextBtn">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
-                    </button>
+                    </div>
                 </div> 
             </div>
 
@@ -211,6 +227,16 @@
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Latest version of jQuery Validation Plugin from CDN -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/latest/jquery.validate.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
     <script src="js/script.js"></script>
 </body>
 </html>
