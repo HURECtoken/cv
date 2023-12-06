@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="css/style.css">
-     
+
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-
-
-    <title>Responsive Regisration Form </title> 
+    <title>Responsive Regisration Form </title>
 </head>
+
 <body>
     <div class="container">
         <header>Миний CV</header>
@@ -31,12 +31,12 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Ургийн овог <i class="uil uil-asterisk"></i></label>
-                            <input type="text" name="fname" value="">
+                            <input type="text" name="surname" value="">
                         </div>
 
                         <div class="input-field">
                             <label>Эцэг/эхийн нэр <i class="uil uil-asterisk"></i></label>
-                            <input type="text" name="fname" value="">
+                            <input type="text" name="lname" value="">
                         </div>
 
                         <div class="input-field">
@@ -46,22 +46,32 @@
 
                         <div class="input-field">
                             <label>Төрсөн огноо <i class="uil uil-asterisk"></i></label>
-                            <input type="date">
+                            <input type="date" name="birthday">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Хүйс <i class="uil uil-asterisk"></i></label>
+                            <select name="gender">
+                                <option disabled selected>-- Хүйс --</option>
+                                <option>Эрэгтэй</option>
+                                <option>Эмэгтэй</option>
+                                <option>Бусад</option>
+                            </select>
                         </div>
 
                         <div class="input-field">
                             <label>Имэйл хаяг <i class="uil uil-asterisk"></i></label>
-                            <input type="text" id="email">
+                            <input type="text" name="email" id="email">
                         </div>
 
                         <div class="input-field">
                             <label>Утасны дугаар <i class="uil uil-asterisk"></i></label>
-                            <input type="text" id="phoneNumber" value="">
+                            <input type="text" name="phone" value="">
                         </div>
 
                         <div class="input-field">
                             <label>Гэрлэлтийн байдал</label>
-                            <select>
+                            <select name="married">
                                 <option value="0">Гэрлээгүй</option>
                                 <option value="1">Гэрлэсэн</option>
                             </select>
@@ -69,7 +79,7 @@
 
                         <div class="input-field">
                             <label>Жолооны үнэмлэх</label>
-                            <select>
+                            <select name="driver">
                                 <option value="0">Байхгүй</option>
                                 <option value="1">A</option>
                                 <option value="2">B</option>
@@ -80,16 +90,6 @@
                             </select>
                         </div>
 
-                        <div class="input-field">
-                            <label>Хүйс <i class="uil uil-asterisk"></i></label>
-                            <select>
-                                <option disabled selected>-- Хүйс --</option>
-                                <option>Эрэгтэй</option>
-                                <option>Эмэгтэй</option>
-                                <option>Бусад</option>
-                            </select>
-                        </div>
-                        
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Боловсролын түвшин</label>
-                            <select>
+                            <select name="edu">
                                 <option disabled selected>- Сонго -</option>
                                 <option value="3">Доктор</option>
                                 <option value="2">Магистр</option>
@@ -115,17 +115,17 @@
 
                         <div class="input-field">
                             <label>Мэргэжил</label>
-                            <input type="number">
+                            <input type="number" name="occupation">
                         </div>
 
                         <div class="input-field">
                             <label>Элссэн он</label>
-                            <input type="date">
+                            <input type="date" name="edu_start">
                         </div>
 
                         <div class="input-field">
                             <label>Төгссөн он</label>
-                            <input type="date">
+                            <input type="date" name="edu_end">
                         </div>
                     </div>
 
@@ -133,7 +133,7 @@
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <!-- Experience & Skill -->
@@ -141,7 +141,7 @@
                 <!-- Experience -->
                 <div class="details address">
                     <span class="title">Address Details</span>
-                        
+
                     <div class="fields">
                         <div class="input-field">
                             <label>Address Type</label>
@@ -165,7 +165,7 @@
 
                         <div class="input-field">
                             <label>Block Number</label>
-                            <input type="number" >
+                            <input type="number">
                         </div>
 
                         <div class="input-field">
@@ -216,27 +216,28 @@
                             <i class="uil uil-navigator"></i>
                             <span class="btnText">Back</span>
                         </div>
-                        
+
                         <button class="sumbit">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div>
-                </div> 
+                </div>
             </div>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Latest version of jQuery Validation Plugin from CDN -->
-    <script src="https://cdn.jsdelivr.net/jquery.validation/latest/jquery.validate.min.js"></script>
+    <script src="js/validate.min.js"></script>
 
     <!-- Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 
     <!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
+
     <script src="js/script.js"></script>
 </body>
+
 </html>

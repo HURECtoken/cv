@@ -232,6 +232,9 @@ span.error::after {
     position: relative;
 }
 
-
+.popover-body{
+    color: red;
+    font-size: 9px;
+}
 
 

@@ -21,14 +21,52 @@ $(document).ready(function () {
 
     $('#FormCv').validate({
         rules: {
+            surname: {
+                required: true
+            },
+            lname: {
+                required: true
+            },
             fname: {
+                required: true
+            },
+            birthday: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            phone: {
+                required: true
+            },
+            gender: {
                 required: true
             }
             // Add other rules for additional fields if needed
         },
         messages: {
+            surname: {
+                required: "оруулна уу!"
+            },
+            lname: {
+                required: "оруулна уу!"
+            },
             fname: {
-                required: "Please enter Ургийн овог"
+                required: "оруулна уу!"
+            },
+            birthday: {
+                required: "сонгоно уу!"
+            },
+            email: {
+                required: "оруулна уу!",
+                email: "Буруу байна!"
+            },
+            phone: {
+                required: "оруулна уу!"
+            },
+            gender: {
+                required: "сонгоно уу!"
             }
             // Add other messages for additional fields if needed
         },
@@ -39,16 +77,19 @@ $(document).ready(function () {
             // Use Bootstrap Popover to show error messages next to the <i> tag
             var icon = $(element).closest('.input-field').find('i');
             icon.attr("data-content", error.text());
+
             icon.popover({
                 trigger: 'manual',
                 placement: 'right',
-                container: 'body'
+                container: '.container',
             }).popover('show');
         },
         success: function (label, element) {
             // Hide Bootstrap Popover on success
-            $('[data-toggle="popover"]').popover('hide');
+            var icon = $(element).closest('.input-field').find('i');
+            icon.popover('hide');
         }
+        
     });
 });
 
